@@ -1,0 +1,16 @@
+server:
+  port: 11111
+#redis配置 (数据库索引  服务器地址 连接端口 服务器连接密码(默认空) 连接池最大连接数(负数表示无限制)
+# 最大空闲连接 最大阻塞等待时间(负数表示无限制) 最小空闲连接 连接超时时间(ms) )
+spring:
+  redis:
+    database: 1
+    host: 192.168.131.110
+    port: 6379
+    password: adt123
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
